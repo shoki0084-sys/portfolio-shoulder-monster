@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIツーリングプランナー | 肩幅モンスター</title>
+  <meta name="description" content="Google MapsのルートとDify AIの旅程・スポット提案を生成するWebアプリ。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-work-page="touring">
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">肩幅<span>モンスター</span></a>
+      <nav class="site-nav"><a href="index.html#works">制作実績</a>
+        <a class="btn btn-line" data-line-url href="#">LINEで相談</a></nav>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html#works">制作実績</a> / ツーリングプランナー</p>
+      <p class="work-sub">Tour Planner（Maps + AI）</p>
+      <h1>AIドライブ・ツーリングプランナー</h1>
+      <p style="color:var(--text-muted)">健康・フィットネス以外の領域ですが、Google MapsとDifyを組み合わせる実装力の参考として掲載しています。</p>
+      <img class="page-hero-thumb" src="images/works/touring.png" alt="AIドライブ・ツーリングプランナー スクリーンショット">
+    </div>
+  </div>
+  <div class="detail-content">
+    <div class="container detail-grid">
+      <div class="detail-block">
+        <h2>何をしたか</h2>
+        <p>フォームに条件を入力すると、Google Maps Directions APIでルート（距離・時間）を取得し、Difyがスケジュール・観光地・飲食店・コメントを生成。結果をカード表示し、地図上にも反映。結果のコピーでLINE等への共有も可能です。</p>
+      </div>
+      <div class="detail-block">
+        <h2>主な機能</h2>
+        <ul>
+          <li>ルート計算（車・バイク想定の料金概算オプション）</li>
+          <li>Difyによる旅程・スポット・飲食店のAI生成</li>
+          <li>地図表示（Maps JavaScript API）</li>
+          <li>結果テキストのクリップボードコピー</li>
+        </ul>
+        <h2>使用技術</h2>
+        <div class="work-tags">
+          <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Google Maps</span><span class="tag">Dify</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="detail-cta">
+        <div class="detail-actions">
+          <a href="#" class="btn btn-secondary link-disabled" data-demo-page target="_blank" rel="noopener">Live Demo</a>
+          <a href="#" class="btn btn-secondary link-disabled" data-repo-page target="_blank" rel="noopener">GitHub</a>
+          <a href="index.html#works" class="btn btn-secondary">一覧に戻る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container"><p>© 2026 肩幅モンスター</p></div></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/work-page.js"></script>
+</body>
+</html>

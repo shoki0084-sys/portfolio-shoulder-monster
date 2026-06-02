@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIボディメイク管理システム | 肩幅モンスター</title>
+  <meta name="description" content="食事・体重・筋トレの記録、DifyによるAI分析、Googleスプレッドシート保存、LINE通知までを実装したWebアプリ。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-work-page="bodymake">
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">肩幅<span>モンスター</span></a>
+      <nav class="site-nav" aria-label="メイン">
+        <a href="index.html#works">制作実績</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn btn-line" data-line-url href="#" target="_blank" rel="noopener">LINEで相談</a>
+      </nav>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html#works">制作実績</a> / AIボディメイク管理システム</p>
+      <p class="work-sub">Client Body Make Hub</p>
+      <h1>AIボディメイク管理システム</h1>
+      <p style="color:var(--text-muted);max-width:40em">クライアントの「続ける」を支える、記録・分析・通知の一元化システムです。</p>
+      <img class="page-hero-thumb" src="images/works/bodymake.png" alt="AIボディメイク管理システム スクリーンショット">
+    </div>
+  </div>
+  <div class="detail-content">
+    <div class="container detail-grid">
+      <div class="detail-block">
+        <h2>誰の課題</h2>
+        <p>パーソナルジム・オンラインコーチで、食事・体重・トレーニングの記録がLINEやメモに分散し、指導前にデータを集める手間がかかっている。</p>
+        <h2>何をしたか</h2>
+        <p>Webブラウザから食事・体重・筋トレを入力すると、Dify（AI）が分析・アドバイスを返します。データはGoogleスプレッドシートに自動保存され、体重はグラフで可視化。必要に応じてLINEへアドバイスをプッシュし、定時の自動通知にも対応しています。</p>
+      </div>
+      <div class="detail-block">
+        <h2>主な機能</h2>
+        <ul>
+          <li>食事記録の入力とAI分析結果の保存</li>
+          <li>体重・体脂肪率の記録とChart.jsによるグラフ表示</li>
+          <li>筋トレ種目・回数・セット数の記録</li>
+          <li>Difyによるアドバイス生成（手動表示・LINE送信）</li>
+          <li>日本時間での定時LINE通知（設定でON/OFF可能）</li>
+          <li>Googleスプレッドシートへのシート別自動追記</li>
+        </ul>
+        <h2>使用技術</h2>
+        <div class="work-tags">
+          <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Dify API</span>
+          <span class="tag">LINE Messaging API</span><span class="tag">Google Sheets API</span><span class="tag">Chart.js</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="detail-block">
+        <h2>設計・運用のポイント</h2>
+        <p>Dify無料枠を意識し、定時通知の無効化や食事入力のまとめ方など、運用コストに配慮した設計をREADMEに明記しています。事業者がスプレッドシートを直接確認できるため、データの透明性も確保しています。</p>
+        <h2>学び・今後の拡張</h2>
+        <p>「記録する」だけでなく「返事が返ってくる」「LINEで届く」まで一連で設計することで、クライアントの継続率向上に直結する構成を学びました。複数トレーナー・複数クライアント対応、管理画面の追加などにも展開可能です。</p>
+      </div>
+      <div class="detail-cta">
+        <p>このような仕組みを、あなたのジム・コーチ業務向けに作れます。まずはお気軽にご相談ください（料金：要相談）。</p>
+        <div class="detail-actions">
+          <a href="#" class="btn btn-secondary link-disabled" data-demo-page target="_blank" rel="noopener">Live Demo</a>
+          <a href="#" class="btn btn-secondary link-disabled" data-repo-page target="_blank" rel="noopener">GitHub</a>
+          <a href="#" class="btn btn-line" data-line-url target="_blank" rel="noopener">公式LINEで相談</a>
+          <a href="index.html#works" class="btn btn-secondary">一覧に戻る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container"><p>© 2026 肩幅モンスター</p></div></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/work-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フィットネスクイズ AI | 肩幅モンスター</title>
+  <meta name="description" content="初級・中級・上級のフィットネスクイズWebアプリ。回答→解説→復習の流れとAI機能で知識定着を支援。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-work-page="quiz">
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">肩幅<span>モンスター</span></a>
+      <nav class="site-nav"><a href="index.html#works">制作実績</a><a href="index.html#contact">Contact</a>
+        <a class="btn btn-line" data-line-url href="#" target="_blank" rel="noopener">LINEで相談</a></nav>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html#works">制作実績</a> / フィットネスクイズ AI</p>
+      <p class="work-sub">Fit Quiz AI</p>
+      <h1>フィットネスクイズ AI</h1>
+      <p style="color:var(--text-muted)">スタッフ教育・会員向けコンテンツとして使える、レベル別フィットネスクイズです。</p>
+      <img class="page-hero-thumb" src="images/works/quiz.png" alt="フィットネスクイズ AI スクリーンショット">
+    </div>
+  </div>
+  <div class="detail-content">
+    <div class="container detail-grid">
+      <div class="detail-block">
+        <h2>誰の課題</h2>
+        <p>ジム・スクールで、トレーナー知識のばらつきや、会員への説明の質をそろえたい。テキストだけのマニュアルでは定着しにくい。</p>
+        <h2>何をしたか</h2>
+        <p>初級・中級・上級の3レベルで、テキスト問題（66問以上）に挑戦できるWebアプリを構築。ホーム → クイズ → 解説 → 復習の4画面構成で、回答後に解説を表示し、復習リストで弱点を再確認できます。AI機能（問題生成・解説補助など）も実装済みです。</p>
+      </div>
+      <div class="detail-block">
+        <h2>主な機能</h2>
+        <ul>
+          <li>レベル別クイズ（選択肢は（ア）（イ）（ウ）（エ）形式）</li>
+          <li>回答 → 解説 → 前へ・次へ の学習フロー</li>
+          <li>復習画面での再挑戦</li>
+          <li>問題データのJSON管理</li>
+          <li>OpenAI APIを用いたAI機能（4種）</li>
+        </ul>
+        <h2>使用技術</h2>
+        <div class="work-tags">
+          <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+          <span class="tag">OpenAI API</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="detail-block">
+        <h2>設計・運用のポイント</h2>
+        <p>ログインなし・自分用運用を想定したシンプル構成。問題はMarkdownからJSONへ変換するバッチも用意し、人間監修しながら問題を増やせる設計です。</p>
+        <h2>学び・今後の拡張</h2>
+        <p>「答える → 理解する → 復習する」の学習サイクルをUIで固定することで、単なる問題集ではなく教育ツールにできます。会員向けログイン、正答率ダッシュボード、画像問題の拡充などに対応可能です。</p>
+      </div>
+      <div class="detail-cta">
+        <p>ジム・スクール向けの教育コンテンツとしてご相談ください（料金：要相談）。</p>
+        <div class="detail-actions">
+          <a href="#" class="btn btn-secondary link-disabled" data-demo-page target="_blank" rel="noopener">Live Demo</a>
+          <a href="#" class="btn btn-secondary link-disabled" data-repo-page target="_blank" rel="noopener">GitHub</a>
+          <a href="#" class="btn btn-line" data-line-url href="#">公式LINEで相談</a>
+          <a href="index.html#works" class="btn btn-secondary">一覧に戻る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container"><p>© 2026 肩幅モンスター</p></div></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/work-page.js"></script>
+</body>
+</html>
