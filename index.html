@@ -33,18 +33,68 @@
       <div class="container hero-grid">
         <div class="hero-content reveal">
           <p class="hero-label">AI × Fitness × Automation Engineer</p>
-          <h1>AIと自動化で<br>日常を便利にする人</h1>
+          <div class="hero-pills" aria-label="強み">
+            <span class="hero-pill">トレーナー経験</span>
+            <span class="hero-pill">AI開発</span>
+            <span class="hero-pill hero-pill-accent">LINE自動化</span>
+          </div>
+          <h1>トレーナー経験 × AI × LINE自動化で、<br>ジム・コーチの「続く仕組み」をつくる</h1>
           <p class="hero-lead">
-            パーソナルトレーナーとして現場を知るから、ジム・コーチ・オンライン指導者の「記録・通知・AIアドバイス」を、LINE・Dify・APIで小さく始められる形にします。
+            現場で培ったボディメイク・ダイエットの知見をもとに、食事記録・AIアドバイス・LINE通知までをひとつにつなぐWebアプリやBotを設計・実装します。
           </p>
           <div class="hero-cta">
             <a href="#works" class="btn btn-secondary">制作実績を見る</a>
+            <a href="https://github.com/shoki0084-sys/portfolio-shoulder-monster" class="btn btn-github" target="_blank" rel="noopener">GitHub</a>
             <a href="#contact" class="btn btn-primary" data-line-url href="#">LINEで相談する</a>
           </div>
         </div>
         <div class="hero-visual reveal">
           <div class="profile-photo-wrap">
             <img src="images/profile.png" alt="肩幅モンスター — プロフィール写真" width="380" height="380">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="stats-section" aria-label="実績サマリー">
+      <div class="container">
+        <div class="stats-grid reveal">
+          <div class="stat-card">
+            <p class="stat-value" data-stat="projects">6</p>
+            <p class="stat-label-en">Projects</p>
+            <p class="stat-label-ja">制作実績</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-value" data-stat="apis">10+</p>
+            <p class="stat-label-en">API Integrations</p>
+            <p class="stat-label-ja">API連携</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-value" data-stat="hours">500+</p>
+            <p class="stat-label-en">Learning Hours</p>
+            <p class="stat-label-ja">学習・開発時間</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI BODYMAKE DIAGNOSIS -->
+    <section id="diagnosis" class="diagnosis-section">
+      <div class="container reveal">
+        <p class="section-label">TOOL</p>
+        <h2 class="section-title">AIボディメイク診断</h2>
+        <p class="section-lead">いまの目標を選ぶと、トレーナー視点の簡易アドバイスを表示します（デモ機能）。</p>
+        <div class="diagnosis-card">
+          <div class="diagnosis-options" role="group" aria-label="目標を選択">
+            <button type="button" class="diagnosis-btn" data-goal="cut">減量</button>
+            <button type="button" class="diagnosis-btn" data-goal="bulk">筋肥大</button>
+            <button type="button" class="diagnosis-btn" data-goal="health">健康維持</button>
+          </div>
+          <div class="diagnosis-result" id="diagnosis-result" hidden>
+            <p class="diagnosis-result-label">あなたへのアドバイス</p>
+            <h3 class="diagnosis-result-title" id="diagnosis-result-title"></h3>
+            <p class="diagnosis-result-text" id="diagnosis-result-text"></p>
           </div>
         </div>
       </div>
@@ -109,6 +159,7 @@
             <div class="work-thumb">AIボディメイク管理</div>
             <p class="work-sub">Client Body Make Hub</p>
             <h3>AIボディメイク管理システム</h3>
+            <p class="work-period">開発期間：約3週間</p>
             <p>食事・体重・筋トレの記録と、DifyによるAIアドバイス・LINE通知。</p>
             <a href="works-bodymake.html" class="btn btn-secondary btn-sm">詳細を見る</a>
           </article>
@@ -117,6 +168,7 @@
             <div class="work-thumb">フィットネスクイズ AI</div>
             <p class="work-sub">Fit Quiz AI</p>
             <h3>フィットネスクイズ AI</h3>
+            <p class="work-period">開発期間：約2週間</p>
             <p>初級・中級・上級のクイズで、知識定着と復習を支援。</p>
             <a href="works-quiz.html" class="btn btn-secondary btn-sm">詳細を見る</a>
           </article>
@@ -125,6 +177,7 @@
             <div class="work-thumb">Dify × LINE Bot</div>
             <p class="work-sub">Coach LINE Assistant</p>
             <h3>Dify × LINE チャットボット</h3>
+            <p class="work-period">開発期間：約1週間</p>
             <p>LINE上で会話が続く、Dify連携ボットの基盤。</p>
             <a href="works-dify-line.html" class="btn btn-secondary btn-sm">詳細を見る</a>
           </article>
@@ -253,6 +306,7 @@
             <img class="work-thumb" src="images/works/bodymake.png" alt="AIボディメイク管理システム スクリーンショット">
             <p class="work-sub">Client Body Make Hub</p>
             <h3>AIボディメイク管理システム</h3>
+            <p class="work-period">開発期間：約3週間</p>
             <p>食事・体重・筋トレを記録し、AIアドバイスとLINE通知まで一気通貫。</p>
             <div class="work-tags">
               <span class="tag">Dify</span><span class="tag">Express</span><span class="tag">Google Sheets</span><span class="tag">LINE API</span>
@@ -268,6 +322,7 @@
             <img class="work-thumb" src="images/works/quiz.png" alt="フィットネスクイズ AI スクリーンショット">
             <p class="work-sub">Fit Quiz AI</p>
             <h3>フィットネスクイズ AI</h3>
+            <p class="work-period">開発期間：約2週間</p>
             <p>初・中・上級のクイズで、スタッフ教育・会員の知識定着を支援。</p>
             <div class="work-tags">
               <span class="tag">Next.js</span><span class="tag">OpenAI</span><span class="tag">JSON</span>
@@ -283,6 +338,7 @@
             <img class="work-thumb" src="images/works/dify-line.png" alt="Dify × LINE チャットボット スクリーンショット">
             <p class="work-sub">Coach LINE Assistant</p>
             <h3>Dify × LINE チャットボット</h3>
+            <p class="work-period">開発期間：約1週間</p>
             <p>LINEで会話が続く。DifyとWebhook連携のボット基盤。</p>
             <div class="work-tags">
               <span class="tag">Dify</span><span class="tag">LINE API</span><span class="tag">Flask</span>
@@ -295,6 +351,7 @@
           <article class="card work-card">
             <img class="work-thumb" src="images/works/slack-line.png" alt="Slack → LINE 通知システム スクリーンショット">
             <h3>Slack → LINE 通知システム</h3>
+            <p class="work-period">開発期間：約3日</p>
             <p>Slackの重要メッセージをLINEに届け、見逃しを防ぐ。</p>
             <div class="work-tags">
               <span class="tag">Slack API</span><span class="tag">LINE API</span><span class="tag">Python</span>
@@ -307,6 +364,7 @@
           <article class="card work-card">
             <img class="work-thumb" src="images/works/google-api.png" alt="Google API 連携ツール群 スクリーンショット">
             <h3>Google API 連携ツール群</h3>
+            <p class="work-period">開発期間：累計約2週間</p>
             <p>スプレッドシート・カレンダー・Gmail・ドライブなど、業務ツール連携の実装経験。</p>
             <div class="work-tags">
               <span class="tag">Google APIs</span><span class="tag">Python</span><span class="tag">OAuth</span>
@@ -320,6 +378,7 @@
             <img class="work-thumb" src="images/works/touring.png" alt="AIドライブ・ツーリングプランナー スクリーンショット">
             <p class="work-sub">Tour Planner</p>
             <h3>AIドライブ・ツーリングプランナー</h3>
+            <p class="work-period">開発期間：約2週間</p>
             <p>MapsのルートとDifyの旅程提案を組み合わせたWebアプリ。</p>
             <p class="work-note">※ Maps＋AI連携の技術実証として掲載</p>
             <div class="work-tags">
@@ -371,7 +430,7 @@
     </div>
   </footer>
 
-  <script src="js/site-config.js?v=2"></script>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/site-config.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

@@ -119,6 +119,46 @@
     els.forEach((el) => io.observe(el));
   }
 
+  const DIAGNOSIS_ADVICE = {
+    cut: {
+      title: "減量フェーズ",
+      text:
+        "カロリーはゆっくりマイナス（週0.5kg前後が目安）。タンパク質は体重×2g前後を意識し、筋トレは週2〜3回維持。睡眠7時間・水分2Lを優先すると脂肪落ちが安定しやすくなります。",
+    },
+    bulk: {
+      title: "筋肥大フェーズ",
+      text:
+        "漸進的オーバーロードと十分なタンパク質（1.6〜2g/kg）が基本。週4〜5回の分割か、全身を週3回。カロリーは維持〜+200kcalから様子を見て調整しましょう。",
+    },
+    health: {
+      title: "健康維持フェーズ",
+      text:
+        "週150分以上の有酸素＋週2回の筋トレが目安。加工食品は減らし、野菜・良質な脂質・睡眠を整えると、無理なく続けやすくなります。",
+    },
+  };
+
+  function setupDiagnosis() {
+    const buttons = document.querySelectorAll(".diagnosis-btn");
+    const resultBox = document.getElementById("diagnosis-result");
+    const titleEl = document.getElementById("diagnosis-result-title");
+    const textEl = document.getElementById("diagnosis-result-text");
+    if (!buttons.length || !resultBox || !titleEl || !textEl) return;
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const goal = btn.getAttribute("data-goal");
+        const advice = DIAGNOSIS_ADVICE[goal];
+        if (!advice) return;
+
+        buttons.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        titleEl.textContent = advice.title;
+        textEl.textContent = advice.text;
+        resultBox.hidden = false;
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     applyLineLinks();
     applyOptionalLinks();
@@ -126,5 +166,6 @@
     setupHeader();
     setupSmoothScroll();
     setupReveal();
+    setupDiagnosis();
   });
 })();
