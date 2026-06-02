@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   lineQr: "images/line-qr.png",
 
   /** メインGitHub（フッター用） */
-  github: "",
+  github: "https://github.com/shoki0084-sys/portfolio-shoulder-monster",
 
   crowdworks: "",
   coconala: "",
