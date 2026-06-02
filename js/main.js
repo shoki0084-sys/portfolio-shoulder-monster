@@ -30,10 +30,17 @@
   function applyWorkLinks() {
     const demos = cfg.demos || {};
     const repos = cfg.githubRepos || {};
+
+    function shouldApplyLink(el) {
+      const href = el.getAttribute("href") || "";
+      return el.classList.contains("link-disabled") || href === "" || href === "#";
+    }
+
     document.querySelectorAll("[data-demo]").forEach((el) => {
       const key = el.getAttribute("data-demo");
       const url = demos[key];
-      if (url) {
+      if (!url) return;
+      if (shouldApplyLink(el)) {
         el.href = url;
         el.classList.remove("link-disabled");
       }
@@ -41,7 +48,8 @@
     document.querySelectorAll("[data-repo]").forEach((el) => {
       const key = el.getAttribute("data-repo");
       const url = repos[key];
-      if (url) {
+      if (!url) return;
+      if (shouldApplyLink(el)) {
         el.href = url;
         el.classList.remove("link-disabled");
       }
