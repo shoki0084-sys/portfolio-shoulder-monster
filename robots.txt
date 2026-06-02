@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://shoki0084-sys.github.io/portfolio-shoulder-monster/sitemap.xml

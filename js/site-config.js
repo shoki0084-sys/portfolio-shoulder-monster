@@ -15,14 +15,16 @@ const SITE_CONFIG = {
   coconala: "",
 
   demos: {
-    bodymake: "",
-    quiz: "",
-    difyLine: "",
-    slackLine: "",
-    touring: "",
+    // ポートフォリオサイト（GitHub Pages）
+    bodymake: "https://shoki0084-sys.github.io/portfolio-shoulder-monster/",
+    quiz: "https://shoki0084-sys.github.io/portfolio-shoulder-monster/",
+    difyLine: "https://shoki0084-sys.github.io/portfolio-shoulder-monster/",
+    slackLine: "https://shoki0084-sys.github.io/portfolio-shoulder-monster/",
+    touring: "https://shoki0084-sys.github.io/portfolio-shoulder-monster/",
   },
 
   githubRepos: {
+    // 作品ごとのリポジトリURLがある場合はここに入れてください（未設定でもOK）
     bodymake: "",
     quiz: "",
     difyLine: "",
