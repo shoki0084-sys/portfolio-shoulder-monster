@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Meet 議事録自動生成 | 肩幅モンスター</title>
+  <meta name="description" content="Meet録音の文字起こしから議事録を自動生成。Gemini APIとGoogle Docs連携のPythonツール。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-work-page="meetMinutes">
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">肩幅<span>モンスター</span></a>
+      <nav class="site-nav"><a href="index.html#works">制作実績</a>
+        <a class="btn btn-line" data-line-url href="#">LINEで相談</a></nav>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html#works">制作実績</a> / Meet議事録</p>
+      <p class="work-sub">Meet Minutes AI</p>
+      <h1>Google Meet 議事録自動生成</h1>
+      <p style="color:var(--text-muted)">会議の録音・チャットから、文字起こし→構造化された議事録→Google Docs保存までを自動化するPythonツールです。</p>
+      <img class="page-hero-thumb" src="images/works/meet-minutes.png" alt="Google Meet 議事録自動生成の画面">
+    </div>
+  </div>
+  <section class="work-gallery-section" hidden>
+    <div class="container">
+      <h2 class="work-gallery-heading">画面キャプチャ</h2>
+      <div class="work-gallery" data-work-gallery></div>
+    </div>
+  </section>
+  <div class="detail-content">
+    <div class="container detail-grid">
+      <div class="detail-block">
+        <h2>誰の課題</h2>
+        <p>オンライン会議後に議事録を手作業でまとめる時間がかかり、決定事項やアクションアイテムの共有が遅れがちになるチーム・個人事業主。</p>
+        <h2>何をしたか</h2>
+        <p>Google Meetの録音ファイル（MP4等）をGemini APIで文字起こしし、チャットログ（テキスト）と合わせて議事録形式（日時・参加者・議題・決定事項・アクション）に要約。オプションでGoogleドキュメントに保存し、共有リンクを取得できるCLIツールを開発しました。</p>
+      </div>
+      <div class="detail-block">
+        <h2>主な機能</h2>
+        <ul>
+          <li>録音ファイルの文字起こし（MP4 / WebM / MP3 等）</li>
+          <li>チャットログ併用による議事録要約</li>
+          <li>ターミナル表示または Google Docs へ自動保存</li>
+          <li>OAuth 2.0 による Google Docs API 連携</li>
+        </ul>
+        <h2>使用技術</h2>
+        <div class="work-tags">
+          <span class="tag">Python</span><span class="tag">Gemini API</span><span class="tag">Google Docs API</span><span class="tag">OAuth 2.0</span>
+        </div>
+        <h2>学び</h2>
+        <p>「録音を取る」だけで終わらせず、社内共有までつなぐ一連のフローを設計することで、ジムのスタッフ会議やクライアントMTGにも応用できる土台になりました。</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="detail-cta">
+        <div class="detail-actions">
+          <a href="https://github.com/shoki0084-sys/portfolio-shoulder-monster" class="btn btn-secondary" data-repo-page target="_blank" rel="noopener">GitHub</a>
+          <a href="#" class="btn btn-line" data-line-url href="#">公式LINEで相談</a>
+          <a href="index.html#works" class="btn btn-secondary">一覧に戻る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container"><p>© 2026 肩幅モンスター</p></div></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/work-page.js"></script>
+</body>
+</html>

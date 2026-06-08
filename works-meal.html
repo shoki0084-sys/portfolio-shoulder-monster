@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今夜のご飯何にしよう？ | 肩幅モンスター</title>
+  <meta name="description" content="冷蔵庫の食材からAIがレシピとPFCバランスを提案。Groq/OpenAI連携のWebツール。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-work-page="meal">
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">肩幅<span>モンスター</span></a>
+      <nav class="site-nav"><a href="index.html#works">制作実績</a>
+        <a class="btn btn-line" data-line-url href="#">LINEで相談</a></nav>
+    </div>
+  </header>
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html#works">制作実績</a> / 今夜のご飯何にしよう？</p>
+      <p class="work-sub">Tonight's Meal AI</p>
+      <h1>今夜のご飯何にしよう？</h1>
+      <p style="color:var(--text-muted)">家にある食材を入力すると、AIが作れる料理・レシピ・PFCバランスを提案するWebツールです。</p>
+      <img class="page-hero-thumb" src="images/works/meal.png" alt="今夜のご飯何にしよう？の画面">
+    </div>
+  </div>
+  <section class="work-gallery-section" hidden>
+    <div class="container">
+      <h2 class="work-gallery-heading">画面キャプチャ</h2>
+      <div class="work-gallery" data-work-gallery></div>
+    </div>
+  </section>
+  <div class="detail-content">
+    <div class="container detail-grid">
+      <div class="detail-block">
+        <h2>誰の課題</h2>
+        <p>トレーニー・一般ユーザーが「今夜何を作るか」「たんぱく質は足りているか」を毎日悩み、買い物や献立の手間が続かない。</p>
+        <h2>何をしたか</h2>
+        <p>食材リストを入力すると、AI（Groq または OpenAI）が3〜5品のレシピ、作り方、1人分のPFC・カロリー目安、追加で買うと良い食材を返すWebアプリを開発。VercelのサーバーレスAPI（<code>api/suggest.js</code>）でデプロイ可能な構成にしました。</p>
+      </div>
+      <div class="detail-block">
+        <h2>主な機能</h2>
+        <ul>
+          <li>冷蔵庫の食材からレシピを複数提案</li>
+          <li>各料理のPFCバランス・カロリー表示（1人分目安）</li>
+          <li>「この食材があれば〇〇が作れる」買い足し提案</li>
+          <li>Groq（無料枠）または OpenAI API に対応</li>
+        </ul>
+        <h2>使用技術</h2>
+        <div class="work-tags">
+          <span class="tag">HTML / CSS / JS</span><span class="tag">Vercel</span><span class="tag">Groq API</span><span class="tag">OpenAI API</span>
+        </div>
+        <h2>学び</h2>
+        <p>ボディメイク指導で重視する「食事の具体化」を、AIで手軽に提案できる形に落とし込めました。フィットネス以外の日常課題にも、同じAPI設計で展開できると実感しています。</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="detail-cta">
+        <div class="detail-actions">
+          <a href="#" class="btn btn-secondary link-disabled" data-demo-page target="_blank" rel="noopener">Demo</a>
+          <a href="https://github.com/shoki0084-sys/portfolio-shoulder-monster" class="btn btn-secondary" data-repo-page target="_blank" rel="noopener">GitHub</a>
+          <a href="#" class="btn btn-line" data-line-url href="#">公式LINEで相談</a>
+          <a href="index.html#works" class="btn btn-secondary">一覧に戻る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container"><p>© 2026 肩幅モンスター</p></div></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/work-page.js"></script>
+</body>
+</html>

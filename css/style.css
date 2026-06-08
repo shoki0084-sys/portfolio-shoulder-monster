@@ -201,10 +201,84 @@ a:hover {
   font-size: 0.85rem;
 }
 
-/* Hero */
+/* Intro（自己紹介・トップ） */
+.intro-section {
+  padding: calc(var(--header-h) + 2.5rem) 0 3rem;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) 1fr;
+  gap: 2.5rem 3rem;
+  align-items: start;
+}
+
+.intro-side {
+  text-align: center;
+}
+
+.intro-side .profile-photo-wrap {
+  margin: 0 auto 1.25rem;
+  width: min(100%, 280px);
+}
+
+.intro-name {
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+}
+
+.intro-role {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+
+.intro-tagline {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin: 0 0 1rem;
+}
+
+.intro-pills {
+  justify-content: center;
+  margin: 0;
+}
+
+.intro-greeting {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.intro-text p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.intro-text strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.intro-timeline {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.intro-cta {
+  margin-top: 0.5rem;
+}
+
+/* Hero（レガシー互換） */
 .hero {
-  padding: calc(var(--header-h) + 3rem) 0 4rem;
-  min-height: 90vh;
+  padding: calc(var(--header-h) + 2.5rem) 0 3rem;
+  min-height: auto;
   display: flex;
   align-items: center;
 }
@@ -338,10 +412,50 @@ a:hover {
   margin: 0;
 }
 
+.stat-card-experience .stat-label-en,
+.stat-card-experience .stat-label-ja {
+  margin-top: 0.75rem;
+}
+
+.stat-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stat-experience-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.45rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stat-exp-num {
+  font-family: var(--font-en);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-exp-unit {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.stat-exp-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
 /* AI diagnosis */
 .diagnosis-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .diagnosis-card {
@@ -412,7 +526,74 @@ a:hover {
 
 /* Sections */
 section {
-  padding: 5rem 0;
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: rgba(15, 23, 42, 0.45);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.works-section {
+  padding-top: 3.5rem;
+}
+
+.works-group-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.works-group-title:first-of-type {
+  margin-top: 1.75rem;
+}
+
+.works-group-title--sub {
+  margin-top: 3rem;
+}
+
+.works-group-note {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.works-grid--sub .work-card {
+  padding: 1.25rem;
+}
+
+.works-grid--sub .work-card h3 {
+  font-size: 1rem;
+}
+
+.works-grid--sub .work-period {
+  margin-bottom: 0.35rem;
+}
+
+.work-desc {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.works-grid--sub .work-desc {
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+
+.works-grid--sub .work-tags {
+  display: none;
+}
+
+.works-grid--sub .work-thumb {
+  margin-bottom: 0.75rem;
 }
 
 .section-label {
@@ -467,7 +648,7 @@ section {
   font-size: 1.1rem;
 }
 
-.card p {
+.card p:not(.work-period):not(.work-sub):not(.work-note):not(.service-price) {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -516,14 +697,12 @@ section {
   background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
   border-radius: 8px;
   margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  display: block;
   border: 1px solid var(--border);
   width: 100%;
+  height: auto;
   object-fit: cover;
+  object-position: top center;
 }
 
 .work-sub {
@@ -802,9 +981,49 @@ section {
   max-width: 560px;
   aspect-ratio: 16/10;
   object-fit: cover;
+  object-position: top center;
   border-radius: 12px;
   border: 1px solid var(--border);
   margin-top: 1.5rem;
+}
+
+.work-gallery-section {
+  padding: 0 0 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.work-gallery-section .container {
+  max-width: 900px;
+}
+
+.work-gallery-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 1rem;
+  letter-spacing: 0.06em;
+}
+
+.work-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.work-gallery--multi .work-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.work-gallery-item figcaption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  text-align: right;
 }
 
 .breadcrumb {
@@ -885,9 +1104,23 @@ section {
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid,
+  .intro-grid,
   .profile-grid,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .intro-side {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .intro-body .section-label {
+    text-align: center;
+  }
+
+  .intro-greeting {
+    text-align: center;
   }
 
   .card-grid-3,

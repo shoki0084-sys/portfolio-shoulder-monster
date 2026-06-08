@@ -19,7 +19,7 @@ const SITE_CONFIG = {
     bodymake: "",
     quiz: "",
     difyLine: "",
-    slackLine: "",
+    meal: "",
     touring: "",
   },
 
@@ -28,8 +28,8 @@ const SITE_CONFIG = {
     bodymake: "",
     quiz: "",
     difyLine: "",
-    slackLine: "",
-    googleApi: "",
+    meal: "",
+    meetMinutes: "",
     touring: "",
   },
 };
