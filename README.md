@@ -40,8 +40,49 @@ python -m http.server 8080
 
 ## デプロイ
 
-- GitHub Pages / Netlify / Vercel などにフォルダごとアップロード
-- `index.html` がルートにある構成
+### Vercel（おすすめ）
+
+静的HTMLサイトのため、**ビルドコマンド不要**です。
+
+#### 方法A: GitHub 連携（いちばん簡単）
+
+1. [Vercel](https://vercel.com) にログイン（GitHub アカウント連携）
+2. **Add New → Project**
+3. リポジトリ `portfolio-shoulder-monster` を Import
+4. 設定を確認（そのままでOK）:
+   - **Framework Preset**: Other
+   - **Build Command**: （空欄）
+   - **Output Directory**: `.`（ルート）
+   - **Install Command**: （空欄）
+5. **Deploy** をクリック
+
+数分後、`https://portfolio-shoulder-monster-xxxx.vercel.app` のようなURLが発行されます。
+
+**更新の流れ**: ローカルで編集 → `git push` → Vercel が自動で再デプロイ
+
+#### 方法B: CLI からデプロイ
+
+```powershell
+cd "c:\Users\User\AI課題\8-5 最終課題"
+npx vercel login
+npx vercel
+npx vercel --prod
+```
+
+初回はプロジェクト名などを聞かれます。そのまま Enter で問題ありません。
+
+#### 公開後にやること
+
+デプロイURLが決まったら、次を Vercel のURLに合わせて更新してください。
+
+- `sitemap.xml` の `<loc>` 一覧
+- `robots.txt` の `Sitemap:` 行（あれば）
+
+`vercel.json` により、HTML/CSS/JS は更新がすぐ反映され、画像は1日キャッシュされます。
+
+### GitHub Pages
+
+従来どおり `https://shoki0084-sys.github.io/portfolio-shoulder-monster/` でも公開可能です。Vercel と併用する場合、どちらかをメインURLに決めると分かりやすいです。
 
 ## 制作実績の画像（実画面スクリーンショット）
 
