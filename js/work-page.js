@@ -1,4 +1,4 @@
-/** 作品ごとのスクリーンショット（images/works/ 内のファイル名・拡張子 .png） */
+/** 作品ごとのスクリーンショット（images/works/capture/ 内のファイル名・拡張子 .png） */
 const WORK_SCREENSHOTS = {
   bodymake: ["bodymake", "bodymake2", "bodymake3", "bodymake4"],
   quiz: ["quiz", "quiz2", "quiz3", "quiz4"],
@@ -35,7 +35,7 @@ function setupWorkGallery() {
     fig.className = "work-gallery-item";
 
     const img = document.createElement("img");
-    img.src = `images/works/${stem}.png`;
+    img.src = `images/works/capture/${stem}.png`;
     img.alt = `${workTitle}の画面 ${i + 1}`;
     img.loading = i === 0 ? "eager" : "lazy";
     img.decoding = "async";
