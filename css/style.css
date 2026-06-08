@@ -208,18 +208,140 @@ a:hover {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 300px) 1fr;
+  grid-template-columns: minmax(280px, 400px) 1fr;
   gap: 2.5rem 3rem;
   align-items: start;
 }
 
-.intro-side {
-  text-align: center;
+.intro-visual-stack {
+  margin-bottom: 1.25rem;
 }
 
 .intro-side .profile-photo-wrap {
-  margin: 0 auto 1.25rem;
-  width: min(100%, 280px);
+  margin: 0 auto 0.75rem;
+  width: min(100%, 220px);
+}
+
+.competition-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.competition-frame {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+  position: relative;
+}
+
+.competition-frame--feature {
+  grid-column: 1 / -1;
+}
+
+.competition-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.competition-frame--feature img {
+  max-height: 240px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.competition-frame:not(.competition-frame--feature) img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.competition-frame figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--text);
+  background: linear-gradient(transparent, rgba(11, 18, 32, 0.92));
+}
+
+/* Fitness story */
+.fitness-story {
+  padding: 3.5rem 0;
+}
+
+.fitness-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.fitness-story-hero {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.fitness-story-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  line-height: 0;
+}
+
+.fitness-story-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  vertical-align: middle;
+}
+
+.fitness-story-caption {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+
+.fitness-story-body {
+  padding-top: 0.15rem;
+}
+
+.fitness-story-body p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.fitness-story-body strong {
+  color: var(--text);
+}
+
+.fitness-values {
+  margin-top: 1.25rem;
+}
+
+.intro-side {
+  text-align: center;
 }
 
 .intro-name {
@@ -1111,8 +1233,20 @@ section {
   }
 
   .intro-side {
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
+  }
+
+  .fitness-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fitness-story-body {
+    padding-top: 0;
+  }
+
+  .competition-frame--feature img {
+    max-height: 200px;
   }
 
   .intro-body .section-label {
