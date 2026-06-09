@@ -236,16 +236,55 @@
       <div class="container reveal">
         <p class="section-label">TOOL</p>
         <h2 class="section-title">AIボディメイク診断</h2>
-        <p class="section-lead">いまの目標を選ぶと、トレーナー視点の簡易アドバイスを表示します（デモ機能）。</p>
+        <p class="section-lead">あなたの情報を入力して目標を選ぶと、BMI・目標カロリー・タンパク質量を算出し、トレーナー視点のアドバイスを表示します（デモ機能）。</p>
         <div class="diagnosis-card">
-          <div class="diagnosis-options" role="group" aria-label="目標を選択">
-            <button type="button" class="diagnosis-btn" data-goal="cut">減量</button>
-            <button type="button" class="diagnosis-btn" data-goal="bulk">筋肥大</button>
-            <button type="button" class="diagnosis-btn" data-goal="health">健康維持</button>
-          </div>
+          <form id="diagnosis-form" class="diagnosis-form" novalidate>
+            <div class="diagnosis-form-grid">
+              <label class="diagnosis-field">
+                <span class="diagnosis-field-label">性別</span>
+                <select name="gender" required>
+                  <option value="">選択してください</option>
+                  <option value="male">男性</option>
+                  <option value="female">女性</option>
+                </select>
+              </label>
+              <label class="diagnosis-field">
+                <span class="diagnosis-field-label">年齢</span>
+                <input type="number" name="age" min="15" max="80" placeholder="例：28" required>
+              </label>
+              <label class="diagnosis-field">
+                <span class="diagnosis-field-label">身長（cm）</span>
+                <input type="number" name="height" min="130" max="220" placeholder="例：170" required>
+              </label>
+              <label class="diagnosis-field">
+                <span class="diagnosis-field-label">体重（kg）</span>
+                <input type="number" name="weight" min="30" max="200" step="0.1" placeholder="例：65" required>
+              </label>
+              <label class="diagnosis-field diagnosis-field--wide">
+                <span class="diagnosis-field-label">活動レベル</span>
+                <select name="activity" required>
+                  <option value="">選択してください</option>
+                  <option value="low">低い（デスクワーク中心）</option>
+                  <option value="moderate">普通（週2〜3回の運動）</option>
+                  <option value="high">高い（週4回以上・肉体労働）</option>
+                </select>
+              </label>
+            </div>
+            <fieldset class="diagnosis-goal-fieldset">
+              <legend class="diagnosis-field-label">目標</legend>
+              <div class="diagnosis-options" role="group" aria-label="目標を選択">
+                <button type="button" class="diagnosis-btn" data-goal="cut">減量</button>
+                <button type="button" class="diagnosis-btn" data-goal="bulk">筋肥大</button>
+                <button type="button" class="diagnosis-btn" data-goal="health">健康維持</button>
+              </div>
+            </fieldset>
+            <p class="diagnosis-form-error" id="diagnosis-form-error" hidden></p>
+            <button type="submit" class="btn btn-primary diagnosis-submit">診断する</button>
+          </form>
           <div class="diagnosis-result" id="diagnosis-result" hidden>
             <p class="diagnosis-result-label">あなたへのアドバイス</p>
             <h3 class="diagnosis-result-title" id="diagnosis-result-title"></h3>
+            <div class="diagnosis-stats" id="diagnosis-stats"></div>
             <p class="diagnosis-result-text" id="diagnosis-result-text"></p>
           </div>
         </div>
